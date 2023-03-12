@@ -5,7 +5,7 @@ Create a function that takes an integer as an argument and returns "Even" for ev
 */
 
 // Sol:
-
+const evenOrOdd = (num) => (num % 2 === 0) ? "Even" : "Odd";
 
 // Test Cases:
 const chai = require('chai');
