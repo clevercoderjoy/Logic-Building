@@ -19,7 +19,16 @@ Examples:(Input --> Output)
 */
 
 // Sol:
-
+const SeriesSum = (n) => {
+    if (n === 0) {
+        return "0.00";
+    }
+    let res = 1;
+    for (let i = 1; i < n; i++) {
+        res += 1 / (1 + (i * 3));
+    }
+    return `${res.toFixed(2)}`;
+}
 
 // Test Cases:
 const Test = require('@codewars/test-compat');
