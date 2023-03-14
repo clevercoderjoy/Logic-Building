@@ -12,7 +12,9 @@ Examples (Input --> Output)
 */
 
 // Sol:
-
+const validatePIN = (pin) => {
+    return /^(\d{4}|\d{6})$/.test(pin);
+}
 
 // Test Cases:
 const Test = require('@codewars/test-compat');
