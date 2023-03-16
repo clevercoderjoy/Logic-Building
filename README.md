@@ -1,4 +1,4 @@
 # codewars
  My solutions for codewars problems
  
- ![image](https://user-images.githubusercontent.com/74505057/224256500-0ae5e25f-832e-40a0-b51a-216fa7ee2bdd.png)
+ ![image](https://user-images.githubusercontent.com/74505057/225711017-7fa264ca-03f2-4150-bbb1-a526e05e17a9.png)
