@@ -12,7 +12,14 @@ Note: for the purposes of this kata you will assume that it is a square if its l
 */
 
 // Sol:
-
+const areaOrPerimeter = function (l, w) {
+    // Return your answer
+    if (l === w) {
+        return Math.pow(l, 2);
+    } else {
+        return 2 * (l + w);
+    }
+};
 
 // Test Cases:
 const {
