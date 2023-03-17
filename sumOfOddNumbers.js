@@ -16,7 +16,7 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 */
 
 // Sol:
-
+const rowSumOddNumbers = (n) => Math.pow(n, 3);
 
 // Test Cases:
 const chai = require("chai");
