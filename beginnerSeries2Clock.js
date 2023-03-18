@@ -19,7 +19,12 @@ Input constraints:
 */
 
 // Sol:
-
+const past = (h, m, s) => {
+    let res = s;
+    m = m * 60;
+    h = h * 3600;
+    return (res + m + h) * 1000;
+}
 
 // Test Cases:
 const {
