@@ -13,8 +13,20 @@ There will always be at least one number in the input string.
 Output string must be two numbers separated by a single space, and highest number is first.
 */
 
-// Sol:
+// Sol 1:
+// const highAndLow = (numbers) => {
+//     numbers = numbers.split(' ');
+//     numbers = numbers.map((num) => Number(num));
+//     numbers = numbers.sort(function (a, b) { return a - b });
+//     let res = numbers[numbers.length - 1] + " " + numbers[0];
+//     return res;
+// }
 
+// Sol 2:
+const highAndLow = (numbers) => {
+    numbers = numbers.split(' ').map(Number);
+    return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
 
 // Test Cases:
 const chai = require("chai");
