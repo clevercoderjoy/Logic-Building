@@ -11,7 +11,37 @@ Examples
 */
 
 // Sol:
-
+const sortArray = (arr) => {
+    let evenArr = [];
+    let oddArr = [];
+    let res = [];
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] % 2 === 0)
+        {
+            evenArr.push(arr[i]);
+        }
+        else
+        {
+            oddArr.push(arr[i]);
+        }
+    }
+    oddArr.sort(function (a, b) { return a - b });
+    let oddIndex = 0;
+    let evenIndex = 0;
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] % 2 === 0)
+        {
+            res.push(evenArr[evenIndex++]);
+        }
+        else
+        {
+            res.push(oddArr[oddIndex++]);
+        }
+    }
+    return res;
+}
 
 // Test Cases:
 const chai = require("chai");
