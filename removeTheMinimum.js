@@ -18,7 +18,36 @@ Examples
 */
 
 // Sol:
-
+const removeSmallest = (ratings) => {
+    let res = [];
+    let count = 0;
+    if (!ratings || ratings.length === 0)
+    {
+        return [];
+    }
+    let minVal = ratings.reduce((acc, curr) => {
+        if (curr < acc)
+        {
+            acc = curr;
+        }
+        return acc;
+    });
+    let j = 0;
+    for (let i = 0; i < ratings.length; i++)
+    {
+        if (count === 0)
+        {
+            if (ratings[i] === minVal)
+            {
+                count = 1;
+                continue;
+            }
+        }
+        res[j++] = ratings[i];
+    }
+    console.log(res);
+    return res;
+}
 
 // Test Cases:
 const chai = require("chai");
