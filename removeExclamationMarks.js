@@ -5,7 +5,11 @@ Write function RemoveExclamationMarks which removes all exclamation marks from a
 */
 
 // Sol:
-
+const removeExclamationMarks = (str) => {
+    let res = "";
+    str.split("").map((letter) => (letter !== "!" ? (res += letter) : res));
+    return res;
+};
 
 // Test Cases:
 const chai = require("chai");
@@ -14,6 +18,9 @@ chai.config.truncateThreshold = 0;
 
 describe("Tests", () => {
     it("test", () => {
-        assert.strictEqual(removeExclamationMarks("Hello World!"), "Hello World");
+        assert.strictEqual(
+            removeExclamationMarks("Hello World!"),
+            "Hello World"
+        );
     });
 });
