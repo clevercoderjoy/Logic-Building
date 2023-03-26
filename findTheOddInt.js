@@ -14,6 +14,24 @@ Examples
 */
 
 // Sol:
+const findOdd = (arr) => {
+    let myMap = new Map();
+    arr.map((ele) => {
+        if (myMap.has(ele)) {
+            myMap.set(ele, myMap.get(ele) + 1);
+        } else {
+            myMap.set(ele, 1);
+        }
+    });
+    let res = arr[0];
+    for (let [key, value] of myMap) {
+        if (value % 2 !== 0) {
+            res = key;
+            break;
+        }
+    }
+    return res;
+};
 
 // Test Cases:
 const assert = require("chai").assert;
