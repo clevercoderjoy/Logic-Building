@@ -12,6 +12,7 @@ Examples (input --> output):
 */
 
 // Sol:
+const numberToString = (num) => num.toString();
 
 // Test Cases:
 const assert = require("chai").assert;
