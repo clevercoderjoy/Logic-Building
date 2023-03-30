@@ -31,6 +31,7 @@ The front person in the queue (i.e. the first element in the array/list) proceed
 N.B. You should assume that all the test input will be valid, as specified above.
 
 P.S. The situation in this kata can be likened to the more-computer-science-related idea of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
+https://cdn.discordapp.com/attachments/1071001397153239116/1090856291615920258/image.png
 */
 
 // Sol:
