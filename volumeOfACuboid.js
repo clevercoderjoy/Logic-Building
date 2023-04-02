@@ -5,7 +5,11 @@ Bob needs a fast way to calculate the volume of a cuboid with three values: the 
 */
 
 // Sol:
-
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height;
+    }
+}
 
 // Test Cases:
 const { assert } = require("chai");

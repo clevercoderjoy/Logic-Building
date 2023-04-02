@@ -35,7 +35,14 @@ https://cdn.discordapp.com/attachments/1071001397153239116/1090856291615920258/i
 */
 
 // Sol:
-
+const queueTime = (cx, n) => {
+    const waitTime = new Array(n).fill(0);
+    for (let i = 0; i < cx.length; i++) {
+        let idx = waitTime.indexOf(Math.min(...waitTime));
+        waitTime[idx] += cx[i];
+    }
+    return Math.max(...waitTime);
+};
 
 // Test Cases:
 const { assert } = require("chai");
