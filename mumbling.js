@@ -10,10 +10,41 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 The parameter of accum is a string which includes only letters from a..z and A..Z.
 */
 
-// Sol:
+// // Sol 1:
 
+// const accum = (string) => {
+//     let arr = [];
+//     let index = 1;
+//     let s = "";
+//     string.split("").map((str) => {
+//         s += str.repeat(index++);
+//         arr[index - 2] = s + "-";
+//         s = "";
+//     });
+//     let res = "";
+//     arr.map((str) => {
+//         str.split("").map((s, index) => {
+//             if (index === 0) {
+//                 res += s.toUpperCase();
+//             } else {
+//                 res += s.toLowerCase();
+//             }
+//         });
+//     });
+//     return res.substring(0, res.length - 1);
+// };
+
+// Sol 2:
+
+function accum(s) {
+    return s
+        .split("")
+        .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
+        .join("-");
+}
 
 // Test Cases:
+
 const Test = require("@codewars/test-compat");
 
 describe("accum", function () {
