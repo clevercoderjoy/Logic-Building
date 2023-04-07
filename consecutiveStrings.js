@@ -27,7 +27,20 @@ consecutive strings : follow one after another without an interruption
 */
 
 // Sol:
-
+const longestConsec = (string, k) => {
+    if (string.length === 0 || k > string.length || k <= 0) {
+        return "";
+    }
+    let maxStr = "";
+    let newStr = "";
+    for (let i = 0; i < string.length; i++) {
+        newStr = string.slice(i, i + k);
+        if (newStr.join("").length > maxStr.length) {
+            maxStr = newStr.join("");
+        }
+    }
+    return maxStr;
+};
 
 // Test Cases:
 
