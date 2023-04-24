@@ -1,5 +1,9 @@
 {
     "emmet.includeLanguages": {
         "javascript": " javascriptreact"
+    },
+    "editor.defaultFormatter": null,
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
     }
 }
